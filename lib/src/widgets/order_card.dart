@@ -111,14 +111,15 @@ class OrderCard extends StatelessWidget {
                     ],
                   ),
                 ),
-                Spacer(),
-                GestureDetector(
-                  onTap: () {},
-                    child: Icon(
+              ],
+            ),
+            Spacer(),
+            GestureDetector(
+                onTap: () {},
+                child: Icon(
                   Icons.cancel,
                   color: Colors.grey,
-                )),
-              ],
+                )
             ),
           ],
         ),
