@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foodynepal/src/scoped-model/food_model.dart';
 
 // pages
 import '../pages/home_page.dart';
@@ -7,6 +8,11 @@ import '../pages/favorite_page.dart';
 import '../pages/profile_page.dart';
 
 class MainScreen extends StatefulWidget {
+
+  final FoodModel foodModel;
+
+  MainScreen({ this.foodModel });
+
   @override
   _MainScreenState createState() => _MainScreenState();
 }
@@ -26,6 +32,9 @@ class _MainScreenState extends State<MainScreen> {
   @override
   void initState() {
     super.initState();
+    // call the fetch method on food
+    widget.foodModel.fetchFoods();
+
     homePage = HomePage();
     orderPage = OrderPage();
     favoritePage = FavoritePage();
